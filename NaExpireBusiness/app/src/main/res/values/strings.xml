@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">NaExpireBusiness</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirmPass">Confirm Password</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="restName">Restaurant Name</string>
+    <string name="next">Next</string>
+    <string name="login">Login</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="register">Register</string>
+    <string name="neew">New</string>
+    <string name="newfoodtype">New Food Type</string>
 </resources>
