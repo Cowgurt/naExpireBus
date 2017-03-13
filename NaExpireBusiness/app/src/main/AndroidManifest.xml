@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegRestrauntInfo" />
-        <activity android:name=".RegFoodTypes"></activity>
+        <activity android:name=".RegFoodTypes" />
+        <activity android:name=".RegCreateMenu"></activity>
     </application>
 
 </manifest>

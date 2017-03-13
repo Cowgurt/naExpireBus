@@ -9,15 +9,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class RegFoodTypes extends AppCompatActivity {
 
-    ArrayList<String> list = new ArrayList<String>();
-    ArrayList<String> selected = new ArrayList<String>();
+    ArrayList<String> list = new ArrayList<String>(); //list of all food types
+    ArrayList<String> selected = new ArrayList<String>(); //list of currently selected food types
     ArrayAdapter<String> adapter;
 
     @Override
@@ -25,14 +24,10 @@ public class RegFoodTypes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg_food_types);
 
-        setTitle("Types of Food Served"); //set activity title
+        setTitle("Register"); //set activity title
 
-        //food types for testing
-        String[] types = {"Mexican", "Italian", "Indian", "Cajun", "Thai", "Greek",
-                "Chinese", "Lebanese", "Japanese", "Mediterranean", "French", "Korean",
-                "Vietnamese", "Caribbean"};
-
-        //generate list view for arraylist
+        //initial food types for testing
+        String[] types = {"Mexican", "Italian", "Indian", "Cajun", "Thai", "Greek"};
         for(int i = 0; i < types.length; i++){
             list.add(types[i]);
         }
@@ -45,8 +40,8 @@ public class RegFoodTypes extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //gets text of selected element
-                String sel = listView.getItemAtPosition(position).toString();
+
+                String sel = listView.getItemAtPosition(position).toString(); //gets text of selected element
                 if(isIn(sel)){ //deselect if tapped when selected
                     parent.getChildAt(position).setBackgroundColor(Color.TRANSPARENT);
                     selected.remove(sel); //remove from list of selected food types
@@ -56,12 +51,6 @@ public class RegFoodTypes extends AppCompatActivity {
                     parent.getChildAt(position).setBackgroundColor(Color.argb(255,255,64,129));
                     selected.add(sel); //add to list of selected food types
                 }
-                /*String s = "";
-                for(int i = 0; i < selected.size(); i++){
-                    s += selected.get(i)+" ";
-                }
-                Toast toast = Toast.makeText(getApplicationContext(), position + "selected: " + s, Toast.LENGTH_SHORT);
-                toast.show();*/
             }
         });
     }
@@ -83,5 +72,10 @@ public class RegFoodTypes extends AppCompatActivity {
             Toast toast = Toast.makeText(getApplicationContext(), nFood+" added", Toast.LENGTH_SHORT);
             toast.show();
         }
+    }
+
+    public void clickFoodTypesNext(View View){
+        Intent intent = new Intent(this, RegCreateMenu.class);
+        startActivity(intent);
     }
 }

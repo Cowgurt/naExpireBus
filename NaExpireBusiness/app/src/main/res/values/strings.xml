@@ -12,4 +12,8 @@
     <string name="register">Register</string>
     <string name="neew">New</string>
     <string name="newfoodtype">New Food Type</string>
+    <string name="foodtypeslabel">Select Food Types You Serve</string>
+    <string name="createmenu">Create Menu</string>
+    <string name="newmenuitem">New Menu Item</string>
+    <string name="finish">Finish</string>
 </resources>
