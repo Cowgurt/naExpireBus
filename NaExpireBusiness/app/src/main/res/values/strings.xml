@@ -16,4 +16,18 @@
     <string name="createmenu">Create Menu</string>
     <string name="newmenuitem">New Menu Item</string>
     <string name="finish">Finish</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="filter_array">
+        <item>All</item>
+        <item>Favorites</item>
+        <item>Price: High to Low</item>
+        <item>Price: Low to High</item>
+    </string-array>
+
 </resources>

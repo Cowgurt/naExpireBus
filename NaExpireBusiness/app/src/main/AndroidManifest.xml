@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".RegRestrauntInfo" />
         <activity android:name=".RegFoodTypes" />
-        <activity android:name=".RegCreateMenu"></activity>
+        <activity android:name=".RegCreateMenu" />
+        <activity
+            android:name=".NavDrawer"
+            android:label="@string/title_activity_nav_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

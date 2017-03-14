@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void clickLogin(View view){
+        Intent intent = new Intent(this, NavDrawer.class);
+        startActivity(intent);
+    }
+
     public void clickRegister(View view){
         Intent intent = new Intent(this, RegRestrauntInfo.class);
         startActivity(intent);
