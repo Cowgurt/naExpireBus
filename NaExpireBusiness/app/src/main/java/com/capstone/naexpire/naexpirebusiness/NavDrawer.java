@@ -65,15 +65,25 @@ public class NavDrawer extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.fragment_container, menuFragment).commit();
         } else if (id == R.id.nav_editMenu) {
-
+            EditMenuFragment editMenuFragment = new EditMenuFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, editMenuFragment).commit();
         } else if (id == R.id.nav_orderInbox) {
-
+            OrderInboxFragment orderInboxFragment = new OrderInboxFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, orderInboxFragment).commit();
         } else if (id == R.id.nav_orderHistory) {
-
+            OrderHistoryFragment orderHistoryFragment = new OrderHistoryFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, orderHistoryFragment).commit();
         } else if (id == R.id.nav_activeDiscounts) {
-
+            ActiveDiscountsFragment activeDiscountsFragment = new ActiveDiscountsFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, activeDiscountsFragment).commit();
         } else if (id == R.id.nav_accountInfo) {
-
+            AccountInfoFragment accountInfoFragment = new AccountInfoFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, accountInfoFragment).commit();
         } else if (id == R.id.nav_logout){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

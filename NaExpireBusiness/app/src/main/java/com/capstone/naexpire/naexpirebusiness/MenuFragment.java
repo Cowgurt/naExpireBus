@@ -26,17 +26,40 @@ public class MenuFragment extends Fragment {
 
         MenuFragment.this.getActivity().setTitle("Menu"); //set activity title
 
+        //spinner to select filter method for menu items
         Spinner spinner = (Spinner) view.findViewById(R.id.spnFilter);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        ArrayAdapter<CharSequence> spAdapter = ArrayAdapter.createFromResource(
                 MenuFragment.this.getContext(),
                 R.array.filter_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        spAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(spAdapter);
 
         return view;
+    }
+
+    public class MenuItem{
+        private String name;
+        private double price;
+        private String description;
+
+        MenuItem(){
+            name = "";
+            price = 0.00;
+            description = "";
+        }
+
+        MenuItem(String n, Double p, String d){
+            name = n;
+            price  = p;
+            description = d;
+        }
+        String getName(){return name;}
+        Double getPrice(){return price;}
+        String getDescription(){return description;}
+
+        void setName(String n){name = n;}
+        void setPrice(Double p){price = p;}
+        void setDescription(String d){description = d;}
     }
 
 }
